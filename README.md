@@ -9,7 +9,8 @@ A `param_card.dat` parser. Example:
 ```python
 from mgutil import param_card
 
-pc = param_card('/path/to/param_card.dat')
+pc = param_card()
+pc.read_file('/path/to/param_card.dat')
 
 for particle in pc.particles:
     print(particle.pdg, particle.mass, ...)
