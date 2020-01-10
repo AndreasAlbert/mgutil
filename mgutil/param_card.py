@@ -87,7 +87,7 @@ class param_card():
                     state = self.states.no_block
                     continue
                 _, parval, _, parname = line.split()
-                parameters[parname] = parval
+                parameters[parname] = float(parval)
             elif state == self.states.in_decay_block:
                 # Block with one decay channel per line
                 if(line.startswith("#") and not any([x in line for x in characters])):
